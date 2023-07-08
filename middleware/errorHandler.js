@@ -16,6 +16,7 @@ errorHandler = (err, req, res, msg) => {
         message: err.message,
         stackTrace: err.stack,
       });
+      break;
     case constants.UNAUTHORIZED:
       res.json({
         title: "Unauthorized",
@@ -29,6 +30,7 @@ errorHandler = (err, req, res, msg) => {
         message: err.message,
         stackTrace: err.stack,
       });
+      break;
     case constants.SERVER_ERROR:
       res.json({
         title: "Server Error",
